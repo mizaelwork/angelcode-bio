@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mizael Anjos — Oficina AngelCode</title>
+  <meta
+    name="description"
+    content="Transformo negócios comuns em operações de alta performance — sistemas, automação e IA aplicada. Diagnóstico, oficina e contato direto."
+  >
+  <meta name="author" content="Mizael dos Anjos">
+  <meta name="theme-color" content="#08090A">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Mizael Anjos · Oficina AngelCode">
+  <meta
+    property="og:description"
+    content="Seu negócio não precisa trabalhar mais. Precisa trabalhar melhor. Links: diagnóstico, oficina, sistemas sob medida e WhatsApp direto."
+  >
+  <meta property="og:image" content="assets/logo-metal.png">
+
+  <link rel="icon" type="image/png" href="assets/logo-mark-white.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- fundo: relevo metálico + grid + glow vermelho único (fixos, acompanham rolagem) -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__metal"></div>
+    <div class="bg__grid"></div>
+    <div class="bg__glow"></div>
+  </div>
+
+  <main class="bio">
+
+    <!-- ações utilitárias -->
+    <div class="bio__tools">
+      <button class="tool" type="button" data-share aria-label="Compartilhar esta página">
+        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+      </button>
+      <button class="tool" type="button" data-vcard aria-label="Salvar contato">
+        <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
+      </button>
+    </div>
+
+    <!-- header -->
+    <header class="head reveal">
+      <div class="head__avatar">
+        <img src="assets/logo-mark-white.png" alt="Mizael Anjos" width="56" height="56">
+        <span class="head__status" aria-label="online"></span>
+      </div>
+      <div class="head__id">
+        <h1 class="head__name">Mizael Anjos</h1>
+        <span class="head__badge"><i></i>oficina de alta performance</span>
+      </div>
+      <a class="head__handle num" data-instagram href="https://www.instagram.com/mizael.anjos_/" target="_blank" rel="noopener">@mizael.anjos_</a>
+      <p class="head__bio">
+        Entro no motor do negócio, encontro os gargalos e instalo os sistemas que devolvem potência.
+        <strong>Seu negócio não precisa trabalhar mais. Precisa trabalhar melhor.</strong>
+      </p>
+    </header>
+
+    <!-- links -->
+    <nav class="links" id="links" aria-label="Links"></nav>
+
+    <!-- footer -->
+    <footer class="foot reveal">
+      <div class="foot__social">
+        <a class="tool" data-instagram href="https://www.instagram.com/mizael.anjos_/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="tool" data-youtube href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><path d="M22 12s0-3.5-.45-5.1a2.8 2.8 0 0 0-2-2C17.9 4.5 12 4.5 12 4.5s-5.9 0-7.55.4a2.8 2.8 0 0 0-2 2C2 8.5 2 12 2 12s0 3.5.45 5.1a2.8 2.8 0 0 0 2 2c1.65.4 7.55.4 7.55.4s5.9 0 7.55-.4a2.8 2.8 0 0 0 2-2C22 15.5 22 12 22 12Z"/><path d="m10 9.3 5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a class="tool" data-mail href="mailto:businessmizael@gmail.com" aria-label="E-mail">
+          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+      <p class="foot__brand num">
+        <img src="assets/logo-mark-white.png" alt="" width="20" height="20">
+        AngelCode · não construímos automações, construímos operações
+      </p>
+    </footer>
+  </main>
+
+  <div class="toast num" role="status" aria-live="polite" data-toast></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
