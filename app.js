@@ -43,14 +43,6 @@ const links = [
     featured: true,
   },
   {
-    icon: "wrench",
-    title: "Oficina AngelCode",
-    tag: "em breve",
-    subtitle: "A oficina de alta performance para negócios",
-    url: "",
-    outline: true,
-  },
-  {
     icon: "blueprint",
     title: "Sistema sob medida",
     subtitle: "CRM, automações e agentes feitos pro seu motor",
