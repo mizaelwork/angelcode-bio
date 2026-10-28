@@ -1,18 +1,28 @@
 /* ============================================================
-   Biosite — Mizael Anjos / AngelCode AI
+   Biosite — Mizael Anjos / AngelCode
+   Identidade AngelCode v1.0 (27/10/2026): Inter + JetBrains Mono,
+   grafite + vermelho #BB0D1A, símbolo Turbina. Fontes locais.
    Autocontido (tokens do Design System embutidos) para deploy
    direto na VPS como pasta estática. Mobile-first, max 440px.
    Direção aprovada: preto firme + estrutura + vermelho único +
    grid/glow fixos que acompanham a rolagem.
    ============================================================ */
 
+@font-face { font-family: "Inter"; font-weight: 400; font-display: swap; src: url("assets/fonts/Inter-400.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 500; font-display: swap; src: url("assets/fonts/Inter-500.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 600; font-display: swap; src: url("assets/fonts/Inter-600.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-display: swap; src: url("assets/fonts/JetBrainsMono-400.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 500; font-display: swap; src: url("assets/fonts/JetBrainsMono-500.woff2") format("woff2"); }
+
 :root {
   /* tokens da marca (espelho do Design System oficial) */
   --ma-black:        #08090A;
+  --surface:         #111214;
+  --border:          #222428;
   --ma-grafite-900:  #0E0F11;
-  --ma-grafite-800:  #141517;
+  --ma-grafite-800:  #111214;
   --ma-grafite-700:  #1B1D20;
-  --ma-grafite-600:  #26282C;
+  --ma-grafite-600:  #222428;
   --ma-grafite-500:  #3A3D42;
   --ma-grafite-400:  #565A61;
   --ma-grafite-300:  #8A8F98;
@@ -27,8 +37,8 @@
 
   --success: #16A34A;
 
-  --font-display: "Cinzel", "Times New Roman", serif;
-  --font-body:    "Montserrat", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body:    "Inter", system-ui, sans-serif;
   --font-mono:    "JetBrains Mono", Consolas, monospace;
 
   --radius-md: 8px;
@@ -74,17 +84,17 @@ button { font: inherit; }
 
 /* ---------- fundo (fixo — acompanha a rolagem) ---------- */
 .bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-.bg__metal {
+.bg__mark {
   position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 22rem;
-  background-image: url("assets/logo-metal.png");
-  background-size: 150% auto;
-  background-position: center top;
-  opacity: 0.1;
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 90%);
-          mask-image: linear-gradient(180deg, #000 0%, transparent 90%);
+  top: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(34rem, 120vw);
+  opacity: 0.05;
+  -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent 95%);
+          mask-image: linear-gradient(180deg, #000 30%, transparent 95%);
 }
+.bg__mark img { width: 100%; height: auto; }
 .bg__grid {
   position: absolute;
   inset: -2px;
@@ -169,11 +179,11 @@ button { font: inherit; }
   display: grid;
   place-items: center;
   border-radius: var(--radius-full);
-  background: var(--ma-grafite-800);
-  border: 2px solid var(--accent);
-  box-shadow: var(--glow-accent);
+  background: radial-gradient(70% 70% at 50% 40%, #17181B, var(--ma-black) 75%);
+  border: 1px solid var(--ma-grafite-600);
+  box-shadow: 0 0 0 6px rgba(187, 13, 26, 0.10), 0 12px 32px rgba(0, 0, 0, 0.55);
 }
-.head__avatar img { width: 56px; height: auto; margin-left: 4px; }
+.head__avatar img { width: 58px; height: auto; }
 .head__status {
   position: absolute;
   right: 4px;
@@ -194,8 +204,9 @@ button { font: inherit; }
 .head__name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.5rem;
-  letter-spacing: 0.01em;
+  font-size: 1.6rem;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
   margin: 0;
 }
 .head__badge {
@@ -230,8 +241,9 @@ button { font: inherit; }
 .head__handle:hover { color: var(--accent-hover); }
 .head__bio {
   margin: 0;
-  max-width: 32ch;
+  max-width: 34ch;
   font-size: 0.94rem;
+  letter-spacing: -0.005em;
   line-height: 1.55;
   color: var(--ma-grafite-200);
 }
@@ -302,12 +314,13 @@ button { font: inherit; }
 
 .link {
   position: relative;
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   gap: 0.9rem;
   padding: 1rem 1.1rem;
-  border-radius: var(--radius-lg);
-  background: var(--ma-grafite-800);
+  border-radius: 14px;
+  background: rgba(17, 18, 20, 0.85);
   border: 1px solid var(--ma-grafite-600);
   overflow: hidden;
   transition: border-color var(--dur-base) var(--ease-out),
@@ -344,8 +357,8 @@ button { font: inherit; }
   gap: 0.5rem;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.98rem;
-  letter-spacing: 0.03em;
+  font-size: 1.02rem;
+  letter-spacing: -0.02em;
 }
 .link__tag {
   font-family: var(--font-mono);
@@ -380,7 +393,7 @@ button { font: inherit; }
 
 /* destaque (A Oficina) */
 .link--featured {
-  background: linear-gradient(135deg, var(--accent), var(--accent-pressed));
+  background: var(--accent);
   border-color: var(--accent-hover);
   box-shadow: var(--glow-accent);
 }
@@ -444,7 +457,8 @@ button { font: inherit; }
   color: var(--ma-grafite-300);
   opacity: 0.8;
 }
-.foot__brand img { opacity: 0.85; }
+.foot__brand { justify-content: center; text-align: center; max-width: 34ch; line-height: 1.5; }
+.foot__brand img { opacity: 0.85; flex: none; }
 
 /* ---------- toast ---------- */
 .toast {

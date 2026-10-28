@@ -42,12 +42,7 @@ const links = [
     url: waDiagnostico,
     featured: true,
   },
-  {
-    icon: "blueprint",
-    title: "Sistema sob medida",
-    subtitle: "CRM, automações e agentes feitos pro seu motor",
-    url: waSobMedida,
-  },
+  // "Sistema sob medida" removido em 27/10/2026 — este espaço vai receber o Jurisfera (em produção).
   {
     icon: "globe",
     title: "Site AngelCode",
