@@ -54,12 +54,8 @@ const links = [
     subtitle: "Conheça a oficina por dentro",
     url: config.site,
   },
-  {
-    icon: "wallet",
-    title: "Checkinmoney",
-    subtitle: "Meu sistema de gestão financeira",
-    url: "https://www.checkinmoney.com/",
-  },
+  // Checkinmoney: desativado temporariamente (domínio fora do ar). Para voltar, recolocar:
+  // { icon: "wallet", title: "Checkinmoney", subtitle: "Meu sistema de gestão financeira", url: "https://www.checkinmoney.com/" },
   {
     icon: "chat",
     title: "WhatsApp",
